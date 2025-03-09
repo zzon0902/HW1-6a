@@ -4,7 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Homework Platform</title>
-   
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.homework-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.homework-container img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center; /* Center cropping adjustment */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+label[for="student-name"] {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    text-align: left;
+}
+
+#student-name {
+    display: block;
+    margin: 0 auto 15px;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    margin: 15px 0;
+    visibility: hidden;
+}
+
+.audio-visible {
+    visibility: visible;
+}
+
+.controls, .navigation {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.record {
+    background-color: #28cf7f;
+    color: white;
+    margin-bottom: 15px;
+}
+
+button.stop {
+    background-color: #ff5757;
+    color: white;
+    margin-bottom: 15px;
+}
+
+button.submit {
+    background-color: #004aad;
+    color: white;
+    margin-top: 20px;
+}
+
+button.prev {
+    background-color: #ffbd59;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button.next {
+    background-color: #ffbd59;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    color: #8c8c8c;
+    cursor: not-allowed;
+}
+
 </head>
 <body>
     <div class="homework-container">
